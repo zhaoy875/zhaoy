@@ -1,0 +1,177 @@
+update--20151208
+
+
+@charset "utf-8";
+/*reset*/
+body, dl, dd, h1, h2, h3, h4, h5, h6, p, form{margin:0;} 
+ol,ul{margin:0; padding:0;}
+li{list-style: none;}
+a{text-decoration: none;/*display:inline-block;*/ color: #000;}
+p{text-indent:2em;}
+body{background: #e8e8e8;font-family:"Microsoft Yahei","Arial","Microsoft Jhenghei","sans-serif","Tahoma","宋体";}
+a:link,a:visited{}
+a:hover,a:active{}
+
+
+/************* 展示位置    *****************/
+.p-a { position: absolute;}
+.p-r { position: relative;}
+.over { overflow: hidden;}
+.t-over { text-overflow: ellipsis; white-space: nowrap;}   /*****  不允许断行  ，超出用  ......  代替   *****/
+.t-ovr { white-space: nowrap;}  /** 不允许断行   */
+.t-num{text-wrap: none; word-break: normal; }/* 数字不断行 */
+.t-letter{word-break: normal;}/* 单词不断行 */
+.box-justify { -webkit-box-pack:justify; }
+
+垂直居中
+display: table-cell;vertical-align: middle;
+  vertical-align: baseline;
+
+
+字体   
+
+font-family:'Microsoft Jhenghei','Consolas',arial','Michroma','Segoe UI Light','Segoe UI','微软雅黑','sans-serif','Times';
+
+文字换行
+word-wrap:break-word;word-break:break-all;
+text-overflow:clip | ellipsis;超出容器部分裁剪/用省略号显示
+
+首字突出显示
+p:first-letter {float:left;font-size:40px;font-weight:bold;}
+p:first-line {color:#090;}
+
+表单标签垂直对齐
+label,input {
+    display: inline-block;
+    vertical-align: middle;
+    /**display:inline;   兼容低版本ie
+    *zoom: 1;
+    *vertical-align: auto;*/
+}
+
+
+/*--------------清除浮动-------------*/
+<style>
+.clearfix:before,.clearfix:after { content:""; display:table; }
+.clearfix:after {clear: both; }
+.clearfix {zoom:1;}
+</style>
+
+/*清除浮动代码*/
+.clearfloat:after{display:block;clear:both;content:"";visibility:hidden;height:0}
+.clearfloat{zoom:1} 
+
+
+在浮动的父元素加overflow: auto;父元素高度撑起来
+
+<ul class="clearfix">
+<li style="float:left">test float</li>
+</ul>
+<div>after div</div>
+/*------------------------------*/
+
+
+
+/*css3动画渐变按钮*/
+http://zurb.com/playground/radioactive-buttons
+
+@-webkit-keyframes greenPulse {
+  from { background-color: #ccc; -webkit-box-shadow: 0 0 9px #fff;}
+  50% { background-color: #c81623; -webkit-box-shadow: 0 0 18px #c81623;}
+  to { background-color: #ccc; -webkit-box-shadow: 0 0 9px #fff;}
+}
+.xy_order_btnpay{width:120px;font-size:16px;font-weight:bold;border:none;color:#fff;background-color: #c81623;
+height:35px;line-height:35px;cursor:pointer;border-radius:4px; 
+ -webkit-animation-name: greenPulse;
+  -webkit-animation-duration: 3s;-webkit-animation-iteration-count: infinite;}
+
+
+
+
+背景颜色渐变
+body{
+    font-size: 16px;color: #fff;font-family:'Microsoft Jhenghei','Microsoft YaHei','Arial','sans-serif';text-shadow:1px 1px 1px rgba(0,0,0,1);
+    background: #333; /* Old browsers */
+    background: -moz-linear-gradient(left, #222 0%, #999 100%); /* FF3.6+ */
+    background: -webkit-linear-gradient(left, #222 0%,#999 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(left, #222 0%,#999 100%); /* Opera11.10+ */
+    background: -ms-linear-gradient(left, #222 0%,#999 100%); /* IE10+ */
+    background: linear-gradient(left, #222 0%,#999 100%); /* W3C */
+  background:url("img/bg.png");
+    background-attachment: fixed;
+    background-size: cover;
+}
+	background: -webkit-linear-gradient(top, #000 25%,#fff 75%);
+	/*top指的是从上向下线性渐变，left即从左到右，25%指的是从自上而下高度的1/4长度开始，75%结束*/
+
+背景图片
+background:url(xxx/1.jpg);
+background-color:rgba(88,200,100,0.7);
+background-repeat: no-repeat;
+}
+
+圆角边框和阴影
+	border-radius: 3px;
+	box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+
+/*设置元素透明度*/
+opacity:0.5; 规定不透明度级别。从0完全透明）到 1.0（完全不透明）
+
+IE8 以及更早的版本支持替代的 filter 属性。例如：filter:Alpha(opacity=50)
+
+
+*{margin:0;padding:0;list-style-type:none;}
+
+
+	
+
+    <img src ="planets.gif" alt="Planets" usemap ="#planetmap" />
+
+<map name="planetmap">
+  <area shape="rect" coords="0,0,110,260" href="sun.htm" alt="Sun" />
+  <area shape="circle" coords="129,161,10" href="mercur.htm" alt="Mercury" />
+  <area shape="circle" coords="180,139,14" href="venus.htm" alt="Venus" />
+</map>
+
+
+emmet
+
+  ul>(li.nav-site>a#a$)*20  
+
+
+    <ul>
+            <li class="nav-site"><a href="" id="a1"></a></li>
+            <li class="nav-site"><a href="" id="a2"></a></li>
+            <li class="nav-site"><a href="" id="a3"></a></li>
+            <li class="nav-site"><a href="" id="a4"></a></li>
+            <li class="nav-site"><a href="" id="a5"></a></li>
+            <li class="nav-site"><a href="" id="a6"></a></li>
+            <li class="nav-site"><a href="" id="a7"></a></li>
+            <li class="nav-site"><a href="" id="a8"></a></li>
+            <li class="nav-site"><a href="" id="a9"></a></li>
+            <li class="nav-site"><a href="" id="a10"></a></li>
+            <li class="nav-site"><a href="" id="a11"></a></li>
+            <li class="nav-site"><a href="" id="a12"></a></li>
+            <li class="nav-site"><a href="" id="a13"></a></li>
+            <li class="nav-site"><a href="" id="a14"></a></li>
+            <li class="nav-site"><a href="" id="a15"></a></li>
+            <li class="nav-site"><a href="" id="a16"></a></li>
+            <li class="nav-site"><a href="" id="a17"></a></li>
+            <li class="nav-site"><a href="" id="a18"></a></li>
+            <li class="nav-site"><a href="" id="a19"></a></li>
+            <li class="nav-site"><a href="" id="a20"></a></li>
+          </ul>   
+
+
+
+.xy_order_btnpay:hover{transition:1s;background-color:red}
+ @-webkit-keyframes greenPulse {
+  from { background-color: #ccc; -webkit-box-shadow: 0 0 9px #fff;}
+  50% { background-color: #c81623; -webkit-box-shadow: 0 0 18px #c81623;}
+  to { background-color: #ccc; -webkit-box-shadow: 0 0 9px #fff;}
+}
+.xy_order_btnpay{width:120px;font-size:16px;font-weight:bold;border:none;color:#fff;background-color: #c81623;
+height:35px;line-height:35px;cursor:pointer;border-radius:4px; 
+ -webkit-animation-name: greenPulse;
+  -webkit-animation-duration: 3s;-webkit-animation-iteration-count: infinite;}
+

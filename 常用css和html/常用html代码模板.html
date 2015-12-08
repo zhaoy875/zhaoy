@@ -1,0 +1,212 @@
+﻿update--20151208
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="">
+	<script src="http://apps.bdimg.com/libs/jquery/1.8.3/jquery.min.js"></script>
+	<style type="text/css">
+
+	</style>
+	<script type="text/javascript">
+
+	</script>
+	 	
+</head>
+<body>
+	<div>
+		
+
+	</div>	
+</body>
+</html>
+
+<script type="text/javascript">
+	弹窗demo
+		// Tab菜单切换
+    	$(document).ready(function() {
+    		$('.zy_nav li').click(function() {
+    			$(this).addClass("on").siblings("li").removeClass("on");
+    		
+			$(".zy_item").eq($(this).index()).show().siblings(".zy_item").hide();
+    		});
+    	});
+
+		function bbs(){
+		   	$("#pageDiv, .mengban").show(); 
+		   	
+	    	$("#pageDiv h3 span").click(function(){
+	    		$("#pageDiv, .mengban").hide();
+	    	});
+		}
+		
+		function selectChannel(){
+			$("#channelDiv, .mengban").show(); 
+		   	
+	    	$("#channelDiv h3 span").click(function(){
+	    		$("#channelDiv, .mengban").hide();
+	    	});
+		}
+</script>
+
+emmet快捷键
+<!-- 快捷键 div#fullpege>(div.section#page$>div.container>h1+p+div.content)*3-->
+<div id="fullpege">
+	<div class="section" id="page1">
+		<div class="container">
+			<h1></h1>
+			<p></p>
+			<div class="content"></div>
+		</div>
+	</div>
+	<div class="section" id="page2">
+		<div class="container">
+			<h1></h1>
+			<p></p>
+			<div class="content"></div>
+		</div>
+	</div>
+	<div class="section" id="page3">
+		<div class="container">
+			<h1></h1>
+			<p></p>
+			<div class="content"></div>
+		</div>
+	</div>
+</div>
+
+
+<!--[if !IE]> 除IE外都可识别 <![endif]-->
+<!--[if IE]> 所有的IE可识别 <![endif]-->
+<!--[if IE 6]> 仅IE6可识别 <![endif]-->
+<!--[if lt IE 6]> IE6以及IE6以下版本可识别 <![endif]-->
+<!--[if gte IE 6]> IE6以及IE6以上版本可识别 <![endif]-->
+<!--[if IE 7]> 仅IE7可识别 <![endif]-->
+<!--[if lt IE 7]> IE7以及IE7以下版本可识别 <![endif]-->
+<!--[if gte IE 7]> IE7以及IE7以上版本可识别 <![endif]-->
+<!--[if IE 8]> 仅IE8可识别 <![endif]-->
+<!--[if IE 9]> 仅IE9可识别 <![endif]-->
+
+
+<!-- 使IE9及以下浏览器支持HTML5标签和css3部分-->
+<!--[if lt IE 9]><script src="http://cdn.bootcss.com/html5shiv/3.7/html5shiv.js"></script><![endif]-->
+
+ <!-- 以下两个插件用于在IE8以及以下版本浏览器支持HTML5元素和媒体查询，如果不需要用可以移除 -->
+        <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+<!--[if IE]>
+<script src="http://libs.useso.com/js/html5shiv/3.7/html5shiv.min.js"></script>
+<![endif]-->
+
+
+静态资源公共库
+http://cdn.code.baidu.com/
+
+<link rel="stylesheet" type="text/css" href="css/main.css">
+
+http://cdn.code.baidu.com/
+<script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+
+http://apps.bdimg.com/libs/jquery/1.8.3/jquery.min.js
+<script src="http://apps.bdimg.com/libs/jquery/1.7.2/jquery.min.js"></script>
+
+bootstrap
+http://apps.bdimg.com/libs/bootstrap/3.3.4/js/bootstrap.min.js 
+
+html5shiv
+http://apps.bdimg.com/libs/html5shiv/3.7/html5shiv.min.js
+http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js
+
+
+
+jquery
+<!-- http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js -->
+
+jquery-fullpage		
+http://apps.bdimg.com/libs/jquery-fullPage/2.1.8/jquery.fullPage.js
+
+jquerymobile		
+http://apps.bdimg.com/libs/jquerymobile/1.4.3/jquery.mobile.min.js
+
+jquery-ui			
+http://apps.bdimg.com/libs/jqueryui/1.10.4/jquery-ui.min.js
+
+
+
+
+<!-- 使IE9及以下浏览器支持HTML5标签和css3部分-->
+
+<!--[if lt IE 9]>
+      <script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+
+<!-- 内联js -->
+<!--[if lt IE9]> 
+<script> 
+   (function() {
+     if (! 
+     /*@cc_on!@*/
+     0) return;
+     var e = "abbr, article, aside, audio, canvas, datalist, details, dialog, eventsource, figure, footer, header, hgroup, mark, menu, meter, nav, output, progress, section, time, video".split(', ');
+     var i= e.length;
+     while (i--){
+         document.createElement(e[i])
+     } 
+})() 
+</script>
+<![endif]-->
+
+<html>
+<head>
+
+<meta charset="utf-8">
+	<!--Edge 模式告诉 IE 以最高级模式渲染文档,强制IE使用Chrome Frame渲染-->
+<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="renderer" content="webkit">
+
+<!--[if IE 6]>
+<script src="xxx.js" type="text/javascript"></script>
+<script>text</script>
+<![endif]-->
+
+
+针对360
+meta标签指定双核浏览器内核渲染网页
+<meta name="renderer" content="webkit">强制只用极速内核 
+<meta name="renderer" content="webkit|ie-stand|ie-comp">
+跟font-family的规则类似，按照顺序排他的优先级，不支持则往下
+
+<meta name="renderer" content="webkit">
+<meta http-equiv ="X-UA-Compatible" content="IE=edge,chrome=1" />
+X-UA-Compatible：这是个是IE8的专用标记,用来指定IE8浏览器去模拟某个特定版本的IE浏览器的渲染方式(比如人见人烦的IE6)，以此来解决部分兼容问题。
+如果支持Google Chrome Frame：GCF，则使用GCF渲染；
+可是这里有一个chrome，难道IE也可以模拟chrome？
+
+事实上，情况是谷歌做了个Google Chrome Frame(谷歌内嵌浏览器框架GCF)。这个插件可以让用户的IE浏览器外不变，但用户在浏览网页时，实际上使用的是Google Chrome浏览器内核，而且支持IE6、7、8等多个版本的IE浏览器。
+如果系统安装ie8或以上版本，则使用最高版本ie渲染；
+否则，这个设定可以忽略。
+
+
+<title>标题</title>
+<meta name="keywords" content="关键字" />
+<meta name="description" content="网页描述" />
+<link href="CSS文件地址" rel="stylesheet" type="text/css" />
+<link rel="shortcut icon" href="http://www.webhek.com/favicon.ico">
+</head>
+
+
+<body>
+<div>     </div>
+
+</body>
+</html>
