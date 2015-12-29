@@ -24,6 +24,11 @@
 </html>
 
 <script type="text/javascript">
+// 判断低于ie10
+if($.browser.msie && $.browser.version < 10){
+		$('.dowebok-explain').show();
+	}
+
 	弹窗demo
 		// Tab菜单切换
     	$(document).ready(function() {
@@ -52,35 +57,45 @@
 </script>
 
 <!-- 页面蒙层 -->
-<div id="pagemask" style="background:rgba(0, 0, 0, 0.7); width: 100%; height: 100%; position: fixed; left: 0px; top: 0px; z-index:2000;"></div>
+<div id="pagemask" style="background:rgba(0, 0, 0, 0.7); width: 100%; height: 100%; position: fixed; left: 0px; top: 0px; z-index:1000;"></div>
 
 
 emmet快捷键
-<!-- 快捷键 div#fullpege>(div.section#page$>div.container>h1+p+div.content)*3-->
+<!--快捷键 div#fullpege>(div.section#page$>div.container>h1+p{44}+div.content)*3 -->
 <div id="fullpege">
 	<div class="section" id="page1">
 		<div class="container">
 			<h1></h1>
-			<p></p>
+			<p>44</p>
 			<div class="content"></div>
 		</div>
 	</div>
 	<div class="section" id="page2">
 		<div class="container">
 			<h1></h1>
-			<p></p>
+			<p>44</p>
 			<div class="content"></div>
 		</div>
 	</div>
 	<div class="section" id="page3">
 		<div class="container">
 			<h1></h1>
-			<p></p>
+			<p>44</p>
 			<div class="content"></div>
 		</div>
 	</div>
 </div>
 
+
+
+
+
+
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
 
 <!--[if !IE]> 除IE外都可识别 <![endif]-->
 <!--[if IE]> 所有的IE可识别 <![endif]-->
@@ -97,11 +112,11 @@ emmet快捷键
 <!-- 使IE9及以下浏览器支持HTML5标签和css3部分-->
 <!--[if lt IE 9]><script src="http://cdn.bootcss.com/html5shiv/3.7/html5shiv.js"></script><![endif]-->
 
- <!-- 以下两个插件用于在IE8以及以下版本浏览器支持HTML5元素和媒体查询，如果不需要用可以移除 -->
-        <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-        <![endif]-->
+<!-- 以下两个插件用于在IE8以及以下版本浏览器支持HTML5元素和媒体查询，如果不需要用可以移除 -->
+<!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
 
 <!--[if IE]>
 <script src="http://libs.useso.com/js/html5shiv/3.7/html5shiv.min.js"></script>
@@ -130,6 +145,7 @@ http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js
 
 jquery
 <!-- http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js -->
+1.8.3版 1.72版 经典
 
 jquery-fullpage		
 http://apps.bdimg.com/libs/jquery-fullPage/2.1.8/jquery.fullPage.js
@@ -146,9 +162,9 @@ http://apps.bdimg.com/libs/jqueryui/1.10.4/jquery-ui.min.js
 <!-- 使IE9及以下浏览器支持HTML5标签和css3部分-->
 
 <!--[if lt IE 9]>
-      <script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
+	<script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+	<script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
 
 
 <!-- 内联js -->
@@ -169,6 +185,7 @@ http://apps.bdimg.com/libs/jqueryui/1.10.4/jquery-ui.min.js
 
 <html>
 <head>
+
 
 <meta charset="utf-8">
 	<!--Edge 模式告诉 IE 以最高级模式渲染文档,强制IE使用Chrome Frame渲染-->
@@ -213,3 +230,6 @@ X-UA-Compatible：这是个是IE8的专用标记,用来指定IE8浏览器去模�
 
 </body>
 </html>
+
+H5 audio API
+http://www.w3school.com.cn/tags/html_ref_audio_video_dom.asp

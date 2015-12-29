@@ -5,14 +5,36 @@ update--20151208
 /*reset*/
 body, dl, dd, h1, h2, h3, h4, h5, h6, p, form{margin:0;} 
 ol,ul{margin:0; padding:0;}
+label,input {display: inline-block;vertical-align: middle;}
 li{list-style: none;}
 a{text-decoration: none;/*display:inline-block;*/ color: #000;}
-p{text-indent:2em;}
-body{background: #e8e8e8;font-family:"Microsoft Yahei","Arial","Microsoft Jhenghei","sans-serif","Tahoma","宋体";}
+p.text{text-indent:2em;}
+body{background: #fff;font-family:"Microsoft Yahei","微软雅黑","Arial","Microsoft Jhenghei","sans-serif","Tahoma","宋体";}
 a:link,a:visited{}
 a:hover,a:active{}
+.clearfix:after { 
+  content:"\200B"; 
+  display:block; 
+  height:0; 
+  clear:both; 
+} 
+.clearfix {*zoom:1;}/*IE/7/6*/
 
 
+
+div {
+width:-webkit-calc(100%-100px);
+width:-moz-calc(100%-100px);
+width:calc(100%-100px);
+}
+div {
+    width:100%;
+    box-sizing:border-box;
+    border-left:100px solid transparent;
+}
+
+
+  
 /************* 展示位置    *****************/
 .p-a { position: absolute;}
 .p-r { position: relative;}
@@ -61,6 +83,32 @@ label,input {
 .clearfloat:after{display:block;clear:both;content:"";visibility:hidden;height:0}
 .clearfloat{zoom:1} 
 
+/*清除浮动代码史*/
+http://www.admin10000.com/document/6259.html
+
+　终极版一：
+
+.clearfix:after { 
+  content:"\200B"; 
+  display:block; 
+  height:0; 
+  clear:both; 
+} 
+.clearfix {*zoom:1;}/*IE/7/6*/
+
+　　解释下:content:"\200B";这个参数，Unicode字符里有一个“零宽度空格”，即 U+200B，代替原来的“.”，可以缩减代码量。而且不再使用visibility:hidden。
+
+　　终极版二：
+
+.clearfix:before,.clearfix:after{ 
+    content:""; 
+    display:table; 
+} 
+.clearfix:after{clear:both;} 
+.clearfix{ 
+    *zoom:1;/*IE/7/6*/
+}
+　　这两个终极版代码都很简洁，终极版一和二都可以使用，以上代码都经过测试，大家赶紧用一下吧，如果有什么问题请及时跟我反馈，如果你还停留在clearfix的老代码的时候就赶紧更新一下代码吧。
 
 在浮动的父元素加overflow: auto;父元素高度撑起来
 
@@ -86,7 +134,12 @@ height:35px;line-height:35px;cursor:pointer;border-radius:4px;
   -webkit-animation-duration: 3s;-webkit-animation-iteration-count: infinite;}
 
 
+表单
 
+<input class="11" type="text" value="256" maxlength="76">
+时时改变网页显示
+http://jingyan.baidu.com/article/8ebacdf0300f4c49f65cd51f.html
+.exp-image-wraper img{position:relative;transform:rotate(90deg) scale(0.8,0.8);}
 
 背景颜色渐变
 body{
@@ -115,18 +168,39 @@ background-repeat: no-repeat;
 	box-shadow: 0 1px 2px rgba(0,0,0,0.2);
 
 /*设置元素透明度*/
-opacity:0.5; 规定不透明度级别。从0完全透明）到 1.0（完全不透明）
+兼容ie
+http://blog.csdn.net/jiudihanbing/article/details/8372947
+
+兼容ie8的rgba
+http://my.oschina.net/CodingPeasant/blog/515234
+/*ie 透明滤镜*/
+filter:Alpha(opacity=50)  兼容ie678
+
+filter: progid:DXImageTransform.Microsoft.Alpha(opacity=70);
+
+/*ie 渐变滤镜*/
+filter:alpha(opacity=60)progid:DXImageTransform.Microsoft.gradient(startColorstr=#ffffff,endColorstr=#A9A9A9,GradientType:0;);
+/* 全站黑白滤镜*/
+html { filter:progid:DXImageTransform.Microsoft.BasicImage(grayscale=1); }
+background:transparent;
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#66ffffff,endColorstr=#66ffffff);
+
+opacity:0.5; 支持ie9及以上 规定不透明度级别。从0完全透明）到 1.0（完全不透明）
+filter: progid:DXImageTransform.Microsoft.Alpha(opacity=70);
 
 IE8 以及更早的版本支持替代的 filter 属性。例如：filter:Alpha(opacity=50)
+.iefilter{opacity: 0.6;filter:alpha(opacity=60);}
+.ao_rightside{filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#66ffffff,endColorstr=#6687CEEB);}
+.ao_items{filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#7fffffff,endColorstr=#7fffffff);}
+
+.mainy{filter:progid:DXImageTransform.Microsoft.gradient(enabled='true',startColorstr='#CC000000', endColorstr='#CC000000');}
+/*:root css3选择器，来避免IE9浏览器中的滤镜filter和rgba同时支持时的冲突*/
+:root .mainy {filter:none;background-color:rgba(0,0,0,0.8);}
 
 
-*{margin:0;padding:0;list-style-type:none;}
 
 
-	
-
-    <img src ="planets.gif" alt="Planets" usemap ="#planetmap" />
-
+<img src ="planets.gif" alt="Planets" usemap ="#planetmap" />
 <map name="planetmap">
   <area shape="rect" coords="0,0,110,260" href="sun.htm" alt="Sun" />
   <area shape="circle" coords="129,161,10" href="mercur.htm" alt="Mercury" />
@@ -134,33 +208,7 @@ IE8 以及更早的版本支持替代的 filter 属性。例如：filter:Alpha(o
 </map>
 
 
-emmet
-
-  ul>(li.nav-site>a#a$)*20  
-
-
-    <ul>
-            <li class="nav-site"><a href="" id="a1"></a></li>
-            <li class="nav-site"><a href="" id="a2"></a></li>
-            <li class="nav-site"><a href="" id="a3"></a></li>
-            <li class="nav-site"><a href="" id="a4"></a></li>
-            <li class="nav-site"><a href="" id="a5"></a></li>
-            <li class="nav-site"><a href="" id="a6"></a></li>
-            <li class="nav-site"><a href="" id="a7"></a></li>
-            <li class="nav-site"><a href="" id="a8"></a></li>
-            <li class="nav-site"><a href="" id="a9"></a></li>
-            <li class="nav-site"><a href="" id="a10"></a></li>
-            <li class="nav-site"><a href="" id="a11"></a></li>
-            <li class="nav-site"><a href="" id="a12"></a></li>
-            <li class="nav-site"><a href="" id="a13"></a></li>
-            <li class="nav-site"><a href="" id="a14"></a></li>
-            <li class="nav-site"><a href="" id="a15"></a></li>
-            <li class="nav-site"><a href="" id="a16"></a></li>
-            <li class="nav-site"><a href="" id="a17"></a></li>
-            <li class="nav-site"><a href="" id="a18"></a></li>
-            <li class="nav-site"><a href="" id="a19"></a></li>
-            <li class="nav-site"><a href="" id="a20"></a></li>
-          </ul>   
+/*emmet语法*/
 
 
 
@@ -174,4 +222,11 @@ emmet
 height:35px;line-height:35px;cursor:pointer;border-radius:4px; 
  -webkit-animation-name: greenPulse;
   -webkit-animation-duration: 3s;-webkit-animation-iteration-count: infinite;}
+
+
+css3动画保留最后帧
+-webkit-animation-fill-mode: forwards;
+animation-fill-mode: forwards;
+-webkit-animation-iteration-count: infinite;
+animation-iteration-count: infinite
 

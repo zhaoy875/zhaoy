@@ -1,0 +1,59 @@
+@charset "utf-8";
+/*Normalize.css*/
+article,aside,details,figcaption,figure,footer,header,hgroup,main,menu,nav,section,summary {display: block;}
+audio,canvas,progress,video {display: inline-block;vertical-align: baseline;}
+body, dl, dd, h1, h2, h3, h4, h5, h6, p, form{margin:0;}
+body{background: #fff;font-family:"Microsoft Yahei","微软雅黑","Arial","Microsoft Jhenghei","sans-serif","Tahoma","宋体";}
+ol,li,ul{margin:0; padding:0;}
+table{border-collapse:collapse;border-spacing:0;}
+del{text-decoration: line-through;}
+ul,ol,li{list-style:none;}
+img{border:none;}
+i,em,cite{ font-style:normal;}
+strong, b{font-weight: bold;}
+small {font-size: 80%;}
+p.text{text-indent:2em;}
+code,kbd,pre,samp{font-family: monospace, serif;font-size: 1em;}
+pre{white-space: pre;white-space: pre-wrap;word-wrap: break-word;}
+button,input,select,textarea {font-family: inherit;font-size: 100%;margin: 0;} 
+label,input,textarea {display: inline-block;vertical-align: middle;}
+textarea {overflow: auto;vertical-align: top;}
+table{border-collapse:collapse; border-spacing:0;}
+a{cursor: pointer;text-decoration: none;color: #000;display: inline-block;}
+a:link,a:visited{}
+a:hover,a:active{text-decoration:none;outline:0;}
+
+h1, h2, h3, h4, h5, h6 {font-size: 100%;font-weight: normal;}
+/*移动端*/
+body{min-width:320px;max-width:640px;margin:0 auto;font-family:"Microsoft Yahei","Microsoft Jhenghei","Tahoma","Arial"}
+.header{width:100%;height:75px;line-height: 75px;background:#333;font-size: 32px;
+	text-align:center;position: relative;clear: both;}
+
+/*公共库*/
+.fl{ float:left; }
+.fr{ float:right;}
+.t-over { text-overflow: ellipsis; white-space: nowrap;overflow:hidden;}   /* 不允许断行,超出用...代替 */
+.t-ovr { white-space: nowrap;}  /** 不允许断行   */
+.t-num{text-wrap: none; word-break: normal; }/* 数字不断行 */
+.t-letter{word-break: normal;}/* 单词不断行 */
+.box-justify { -webkit-box-pack:justify; }
+.textcenter{text-align: center;}
+.w100{width:100%;}
+
+.clearfix:after { 
+  content:"\200B"; 
+  display:block; 
+  height:0; 
+  clear:both; 
+} 
+.clearfix{*zoom:1;}/*IE/7/6*/
+.p-r{ position:relative}
+.p-a{ position:absolute}
+.mask{ background:rgba(0,0,0,0.9); width:100%; height:100%; position:fixed; top:0; left:0; z-index:10;}
+
+
+
+
+
+
+
