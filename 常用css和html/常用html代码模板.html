@@ -24,8 +24,8 @@
 </html>
 
 <script type="text/javascript">
-// 判断低于ie10
-if($.browser.msie && $.browser.version < 10){
+	// 判断低于ie10
+	if($.browser.msie && $.browser.version < 10){
 		$('.dowebok-explain').show();
 	}
 
@@ -90,12 +90,26 @@ emmet快捷键
 
 
 
-
-
+<!-- 移动端head标签 -->
 
 <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+
+<!-- iOS设备apple-touch-icon私有属性，safari浏览器上可以使用添加到主屏按钮将网站添加到主屏幕上，方便用户以后访问。 -->
+
+<link rel="apple-touch-icon" href="/custom_icon.png"/>   
+
+
+<!-- Standard iPhone -->  
+<link rel="apple-touch-icon" sizes="57x57" href="touch-icon-iphone-114.png" />  
+<!-- Retina iPhone -->  
+<link rel="apple-touch-icon" sizes="114x114" href="touch-icon-iphone-114.png" />  
+<!-- Standard iPad -->  
+<link rel="apple-touch-icon" sizes="72x72" href="touch-icon-ipad-144.png" />  
+<!-- Retina iPad -->  
+<link rel="apple-touch-icon" sizes="144x144" href="touch-icon-ipad-144.png" /> 
 
 <!--[if !IE]> 除IE外都可识别 <![endif]-->
 <!--[if IE]> 所有的IE可识别 <![endif]-->
@@ -194,6 +208,12 @@ http://apps.bdimg.com/libs/jqueryui/1.10.4/jquery-ui.min.js
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="renderer" content="webkit">
 
+<meta name="keywords" content="阿兰视频合集" />
+<meta name="description" content="收集阿兰所有视频 alan阿兰高清视频" />
+<meta http-equiv="refresh" content="0.01;url=test/20151219/index.html"> 
+<!-- 跳转 -->
+
+
 <!--[if IE 6]>
 <script src="xxx.js" type="text/javascript"></script>
 <script>text</script>
@@ -233,3 +253,14 @@ X-UA-Compatible：这是个是IE8的专用标记,用来指定IE8浏览器去模�
 
 H5 audio API
 http://www.w3school.com.cn/tags/html_ref_audio_video_dom.asp
+
+
+map标签
+<div>
+    <img src="http://img10.360buyimg.com/imgzone/jfs/t1600/343/578637546/369916/d5a8d467/5594e1e1Nd1c10ed8.jpg" width="990" height="900" border="0" usemap="#Map fl" alt="">
+    <map name="Map fl">
+        <area shape="rect" style="border:1px solid red" coords="10,100,200,400" href="http://mall.jd.com/index-120923.html" target="_blank">
+        
+        <area shape="rect" coords="244,589,369,644" href="http://mall.jd.com/view_search-399483-2511502-1-0-24-1.html" target="_blank">
+    </map>
+</div>
