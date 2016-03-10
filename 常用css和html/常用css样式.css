@@ -13,10 +13,20 @@ body{background: #fff;font-family:"Microsoft Yahei","微软雅黑","Arial","Micr
 中文
 
 英文字体
-	'Open Sans Light',Helvetica,Arial,sans-serif
- Cambria
- 数字
- Lucida Sans
+	'Open Sans Light',Helvetica,Arial,sans-serif,Cambria
+
+数字Lucida Sans
+
+
+字体   
+webkit私有属性高级修饰
+-webkit-font-smoothing:antialiased;（貌似没区别）-webkit-text-stroke: 2px #fff
+
+'Helvetica Neue', Arial, 'Hiragino Sans GB'
+
+
+font-family:'Microsoft Jhenghei','Microsoft Yahei','Helvetica Neue','Consolas','arial','Michroma','Segoe UI Light','Segoe UI','sans-serif','Times';
+
 
 
 
@@ -114,9 +124,6 @@ display: table-cell;vertical-align: middle;
   vertical-align: baseline;
 
 
-字体   
-
-font-family:'Microsoft Jhenghei','Consolas',arial','Michroma','Segoe UI Light','Segoe UI','微软雅黑','sans-serif','Times';
 
 文字换行
 word-wrap:break-word;word-break:break-all;
